@@ -25,5 +25,15 @@ VALUES
 ("FELIPE",1);
 /* ALTERA A TABELA DEPOIS ACIONA UMA COLUNA */
 alter table cliente
-add column cpf dec(11) unique;
+add column primeiro_nome varchar(50);
+/*altera o nome da coluna*/
+alter table cliente 
+change column nome sobre_nome varchar(100);
+/*descartar uma coluna*/
+alter table cliente
+drop cpf;
+alter table cliente
+change column sexo genero enum('masculino','feminino','outro');
+
 describe projeto;
+
